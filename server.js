@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/versionsm
 }).then(() => {
   console.log('Database connected');
 }).catch(err => {
-  console.error('Failed to connect to the database. Check your MongoDB URI and ensure the database is up and running:', err);
+  console.error('Database connection failed. Verify your MongoDB URI and ensure that the MongoDB service is running:', err);
 });
 
 // Beispielroute
