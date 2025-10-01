@@ -12,16 +12,16 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/versionsm
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => {
-  console.log('Datenbank verbunden');
+  console.log('Database connected');
 }).catch(err => {
-  console.error('Fehler bei der Datenbankverbindung. Überprüfen Sie die URI und die Netzwerkverbindung:', err);
+  console.error('Error connecting to the database. Please check the URI and network connection:', err);
 });
 
 // Beispielroute
 app.get('/', (req, res) => {
-  res.send('Willkommen zur Versionskontroll-App!');
+  res.send('Welcome to the version control app!');
 });
 
 app.listen(PORT, () => {
-  console.log(`Server läuft auf Port ${PORT}`);
+  console.log(`Server running on port ${PORT}`);
 });
