@@ -19,7 +19,7 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/versionsm
 
 // Beispielroute
 app.get('/', (req, res) => {
-  res.send('Willkommen zur Versionskontrolle App!');
+  res.send('Willkommen zur Versionskontroll-App!');
 });
 
 app.listen(PORT, () => {
